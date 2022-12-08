@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".modules.home.ui.BookFragment">
+
+    <com.bzapps.booksapp.shared.components.form.FormConstraintLayout
+        android:id="@+id/formConstraintLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/spacing_16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.bzapps.booksapp.shared.components.edittext.CustomInputLayout
+            android:id="@+id/cilLogin"
+            style="@style/CustomInputLayout"
+            android:layout_width="330dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="@dimen/spacing_16dp"
+            app:endIconMode="custom"
+            app:endIconTint="@color/background_red_light"
+            app:layout_constraintEnd_toStartOf="@+id/ivSearch"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <com.bzapps.booksapp.shared.components.edittext.CustomEditText
+                android:id="@+id/etSearch"
+                style="@style/CustomEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/search_message_hint"
+                android:imeOptions="actionDone"
+                android:inputType="textWebPassword"
+                android:maxLength="28"
+                app:field_required="false" />
+
+        </com.bzapps.booksapp.shared.components.edittext.CustomInputLayout>
+
+        <ImageView
+            android:id="@+id/ivSearch"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/stretch_content"
+            android:layout_marginStart="@dimen/spacing_16dp"
+            android:layout_marginEnd="@dimen/spacing_16dp"
+            android:enabled="false"
+            android:src="@drawable/ic_search"
+            app:layout_constraintBottom_toBottomOf="@+id/cilLogin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/cilLogin"
+            tools:enabled="true" />
+
+    </com.bzapps.booksapp.shared.components.form.FormConstraintLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/stretch_content"
+        android:layout_marginTop="@dimen/spacing_16dp"
+        android:clipToPadding="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/formConstraintLayout">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvBooks"
+                android:layout_width="@dimen/stretch_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_16dp"
+                android:layout_marginEnd="@dimen/spacing_16dp"
+                android:background="@color/transparent"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:itemCount="2"
+                tools:listitem="@layout/item_books" />
+
+            <TextView
+                android:id="@+id/tvEmptyList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:visibility="invisible"
+                android:textStyle="italic"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:text="@string/no_books_inserted"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

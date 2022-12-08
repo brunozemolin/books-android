@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="transparent">#0000</color>
+    <color name="body">#6B717B</color>
+    <color name="main_blue">#3869B2</color>
+    <color name="main_blue_50">#503869B2</color>
+    <color name="background_red_high">#F15050</color>
+    <color name="text">#6B717B</color>
+    <color name="outline">#AFB5BF</color>
+    <color name="background">#F2F2F7</color>
+    <color name="outline_transparent30">#30AFB5BF</color>
+    <color name="background_loading70">#703869B2</color>
+    <color name="background_components">#FFFFFF</color>
+    <color name="toolbar_color">@android:color/white</color>
+    <color name="toolbar_title_color">#1C1C1E</color>
+    <color name="background_red_light">#EC1A61</color>
+    <color name="background_red_medium">#C62B2B</color>
+    <color name="item_text_color">@android:color/black</color>
+    <color name="gray_transparency_70">#70CCCCCC</color>
+    <color name="login_edittext_icon_tint">#3869B2</color>
+    <color name="edittext_background">#E8EDF6</color>
+    <color name="login_edittext_text_color">#6B717B</color>
+    <color name="gray_tint">#AFB5BF</color>
+    <color name="bg_center_loading">#903869B2</color>
+    <color name="bg_end_loading">#904B499D</color>
+    <color name="bg_start_loading">#906CC9C7</color>
+</resources>

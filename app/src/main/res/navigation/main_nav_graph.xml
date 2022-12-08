@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav_graph"
+    app:startDestination="@id/booksFragment">
+
+    <fragment
+        android:id="@+id/booksFragment"
+        android:name="com.bzapps.booksapp.modules.home.ui.BookFragment"
+        android:label="Books"
+        tools:layout="@layout/fragment_book" >
+
+<!--        <argument-->
+<!--            android:name="userInfo"-->
+<!--            app:argType="string"-->
+<!--            android:defaultValue="" />-->
+
+        <action
+            android:id="@+id/action_booksFragment_to_favoriteFragment"
+            app:enterAnim="@anim/enter_from_right"
+            app:exitAnim="@anim/exit_to_left"
+            app:popEnterAnim="@anim/enter_from_left"
+            app:popExitAnim="@anim/exit_to_right"
+            app:destination="@id/favoriteFragment" />
+        <action
+            android:id="@+id/action_booksFragment_to_includeBookFragment"
+            app:enterAnim="@anim/bottom_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/bottom_out"
+            app:destination="@id/includeBookFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/favoriteFragment"
+        android:name="com.bzapps.booksapp.modules.home.ui.FavoriteFragment"
+        android:label="Favorite"
+        tools:layout="@layout/fragment_favorite" >
+
+        <action
+            android:id="@+id/action_favoriteFragment_to_booksFragment"
+            app:enterAnim="@anim/enter_from_left"
+            app:exitAnim="@anim/exit_to_right"
+            app:popEnterAnim="@anim/enter_from_right"
+            app:popExitAnim="@anim/exit_to_left"
+            app:destination="@id/booksFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/includeBookFragment"
+        android:name="com.bzapps.booksapp.modules.home.ui.IncludeBookFragment"
+        android:label="Include Book"
+        tools:layout="@layout/fragment_include_book" >
+
+
+        <action
+            android:id="@+id/action_includeBookFragment_to_booksFragment"
+            app:destination="@id/booksFragment" />
+    </fragment>
+
+</navigation>

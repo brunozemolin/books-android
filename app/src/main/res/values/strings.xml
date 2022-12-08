@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">BooksApp</string>
+
+    <string name="no_connection_title">Sem conexão :(</string>
+    <string name="no_connection_message">Calma, vai dar certo!\nVerifique sua conexão.</string>
+    <string name="no_connection_sub_message">(Atualizaremos automaticamente assim que a internet voltar)</string>
+
+    <string name="session_expired_message">Sua sessão expirou, realize a autenticação novamente.</string>
+
+    <string name="ok">Ok</string>
+    <string name="confirm">Confirmar</string>
+    <string name="cancel">Cancelar</string>
+    <string name="option">Opção</string>
+    <string name="repeat">Repetir</string>
+    <string name="review">Revisar</string>
+    <string name="logout_app">Logout BooksApp</string>
+    <string name="message_logout">Deseja realmente sair?</string>
+    <string name="login">Login</string>
+    <string name="login_required_message">O login é obrigatório.</string>
+    <string name="password">Senha</string>
+    <string name="password_required_message">A senha é obrigatória.</string>
+    <string name="login_button">Entrar</string>
+    <string name="search_message_hint">Nome do Livro, Autor...</string>
+    <string name="no_books_inserted">Nenhum livro cadastrado...</string>
+    <string name="no_favorite_books_message">Nenhum livro em seus favoritos...</string>
+    <string name="name">Nome</string>
+    <string name="name_required_message">O nome é obrigatório.</string>
+    <string name="author">Autor</string>
+    <string name="author_required_message">O autor é obrigatório.</string>
+    <string name="genre">Gênero</string>
+    <string name="genre_required_message">O gênero é obrigatório.</string>
+    <string name="include_book">Cadastrar Livro</string>
+    <string name="title">Título</string>
+</resources>

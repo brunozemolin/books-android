@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CustomEdittext">
+        <attr name="fieldValidationType" format="enum">
+            <enum name="filed_text" value="1" />
+            <enum name="field_password" value="2" />
+        </attr>
+
+        <attr name="field_required" format="boolean" />
+        <attr name="field_validationMessage" format="string|reference" />
+        <attr name="field_requiredMessage" format="string|reference" />
+    </declare-styleable>
+
+</resources>

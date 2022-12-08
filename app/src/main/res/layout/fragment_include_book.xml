@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".modules.home.ui.BookFragment">
+
+    <ImageView
+        android:id="@+id/ivPhoto"
+        android:layout_width="200dp"
+        android:layout_marginTop="@dimen/spacing_16dp"
+        android:layout_height="350dp"
+        android:src="@drawable/ic_camera"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.bzapps.booksapp.shared.components.form.FormConstraintLayout
+        android:id="@+id/formConstraintLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/spacing_16dp"
+        app:formSubmitButton="@+id/btIncludeBook"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivPhoto">
+
+        <com.bzapps.booksapp.shared.components.edittext.CustomInputLayout
+            android:id="@+id/cilName"
+            style="@style/CustomInputLayout"
+            android:layout_width="@dimen/stretch_content"
+            android:layout_height="wrap_content"
+            app:endIconMode="custom"
+            app:endIconTint="@color/background_red_light"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <com.bzapps.booksapp.shared.components.edittext.CustomEditText
+                android:id="@+id/etName"
+                style="@style/CustomEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/name"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                app:fieldValidationType="filed_text"
+                app:field_required="true"
+                app:field_validationMessage="@string/name_required_message" />
+
+        </com.bzapps.booksapp.shared.components.edittext.CustomInputLayout>
+
+        <com.bzapps.booksapp.shared.components.edittext.CustomInputLayout
+            android:id="@+id/cilAuthor"
+            style="@style/CustomInputLayout"
+            android:layout_width="@dimen/stretch_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_16dp"
+            app:endIconMode="custom"
+            app:endIconTint="@color/background_red_light"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cilName">
+
+            <com.bzapps.booksapp.shared.components.edittext.CustomEditText
+                android:id="@+id/etAuthor"
+                style="@style/CustomEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/author"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                app:fieldValidationType="filed_text"
+                app:field_required="true"
+                app:field_validationMessage="@string/author_required_message" />
+
+        </com.bzapps.booksapp.shared.components.edittext.CustomInputLayout>
+
+        <com.bzapps.booksapp.shared.components.edittext.CustomInputLayout
+            android:id="@+id/cilGenre"
+            style="@style/CustomInputLayout"
+            android:layout_width="@dimen/stretch_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_16dp"
+            app:endIconMode="custom"
+            app:endIconTint="@color/background_red_light"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cilAuthor">
+
+            <com.bzapps.booksapp.shared.components.edittext.CustomEditText
+                android:id="@+id/etGenre"
+                style="@style/CustomEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/genre"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                app:fieldValidationType="filed_text"
+                app:field_required="true"
+                app:field_validationMessage="@string/genre_required_message" />
+
+        </com.bzapps.booksapp.shared.components.edittext.CustomInputLayout>
+
+        <Button
+            android:id="@+id/btIncludeBook"
+            style="@style/ButtonRoundedRed"
+            android:layout_marginTop="@dimen/spacing_32dp"
+            android:enabled="false"
+            android:text="@string/include_book"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cilGenre"
+            tools:enabled="true" />
+
+    </com.bzapps.booksapp.shared.components.form.FormConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
